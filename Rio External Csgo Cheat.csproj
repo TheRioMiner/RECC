@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C17D8BB6-504C-46AD-8103-BDB5347E9B85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rio_External_Csgo_Cheat</RootNamespace>
+    <AssemblyName>Rio External Csgo Cheat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>orc1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\MetroFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\MetroFramework.Fonts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth_Form.Designer.cs">
+      <DependentUpon>Auth_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cheats\AntiFlash.cs" />
+    <Compile Include="Cheats\Bunnyhop.cs" />
+    <Compile Include="Cheats\GlowWallhack.cs" />
+    <Compile Include="Cheats\NoRecoil.cs" />
+    <Compile Include="Cheats\TriggerBot.cs" />
+    <Compile Include="CSGO\LocalPlayer.cs" />
+    <Compile Include="CSGO\Main.cs" />
+    <Compile Include="CSGO\Modules.cs" />
+    <Compile Include="CSGO\Offsets.cs" />
+    <Compile Include="CSGO\PlayerEntity.cs" />
+    <Compile Include="CSGO\PlayerInfo.cs" />
+    <Compile Include="KernelBlackMagic.cs" />
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourcesResolver.cs" />
+    <Compile Include="ShowRanks_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRanks_Form.Designer.cs">
+      <DependentUpon>ShowRanks_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+    <EmbeddedResource Include="Auth_Form.resx">
+      <DependentUpon>Auth_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShowRanks_Form.resx">
+      <DependentUpon>ShowRanks_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="orc1.ico" />
+    <None Include="Resources\PanoramaUI_Icon.jpg" />
+    <None Include="Resources\ScaleFormUI_Icon.jpg" />
+    <None Include="Resources\MetroFramework.Fonts.dll" />
+    <None Include="Resources\MetroFramework.dll" />
+    <None Include="Resources\MetroFramework.Design.dll" />
+    <None Include="Resources\team_t.png" />
+    <None Include="Resources\team_invalid.png" />
+    <None Include="Resources\team_hltv.png" />
+    <None Include="Resources\team_ct.png" />
+    <None Include="Resources\rank_unranked.png" />
+    <None Include="Resources\rank_twoak.png" />
+    <None Include="Resources\rank_supreme.png" />
+    <None Include="Resources\rank_silver6.png" />
+    <None Include="Resources\rank_silver5.png" />
+    <None Include="Resources\rank_silver4.png" />
+    <None Include="Resources\rank_silver3.png" />
+    <None Include="Resources\rank_silver2.png" />
+    <None Include="Resources\rank_silver1.png" />
+    <None Include="Resources\rank_goldnova4.png" />
+    <None Include="Resources\rank_goldnova3.png" />
+    <None Include="Resources\rank_goldnova2.png" />
+    <None Include="Resources\rank_goldnova1.png" />
+    <None Include="Resources\rank_global.png" />
+    <None Include="Resources\rank_eagle2.png" />
+    <None Include="Resources\rank_eagle1.png" />
+    <None Include="Resources\rank_bigstar.png" />
+    <None Include="Resources\rank_ak2.png" />
+    <None Include="Resources\rank_ak1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
