@@ -1,6 +1,6 @@
 # RECC - Rio External Csgo Cheat
 
-Приватный внешний чит для CS:GO.
+Приватный внешний чит для CS:GO, в прошлом. (Теперь в жопу эту ксго, надо вернутся в 2015, там поиграю.)
 
 Он использует специальный __драйвер__ - __KernelBlackMagic__ для чтения и записи памяти.
 
@@ -22,7 +22,7 @@ __Как можно со мной связатся:__
 
 Discord: TheRioMiner#9902
 
-Steam: https://steamcommunity.com/id/kernelblackmagic/  (__на этом акке юзаю чит__)
+Steam: https://steamcommunity.com/id/kernelblackmagic/  (__на этом акке юзал чит__)
 
 Gmail: dakada59@gmail.com
 
@@ -60,6 +60,6 @@ __Показ рангов__ - Специальная таблица показы
  
 
 ## Текущий статус
-__RECC: v1.2.0.0 - Релиз!__
+__RECC: v1.2.0.0 - Финальный релиз__
 
 __KernelBlackMagic: v2.2.1__
